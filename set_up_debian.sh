@@ -4,7 +4,8 @@ sudo apt-get update && sudo apt-get -y install \
 	git \
 	libasound2-dev \
 	libsdl2-dev \
-	pkg-config
+	pkg-confi \
+	dropboxg
 
 curl https://sh.rustup.rs -sSf | sh
 
@@ -12,3 +13,7 @@ read GITHUB_EMAIL
 git config --global user.email "$GITHUB_EMAIL"
 read GITHUB_NAME
 git config --global user.name "$GITHUB_NAME"
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+dropbox start -i
